@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>cura-new</id>
+    <version>3.1.0</version>
+    <title>cura (Install)</title>
+    <authors>Ultimaker</authors>
+    <owners>Ultimaker</owners>
+    <licenseUrl>https://github.com/Ultimaker/Cura/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Ultimaker/Cura</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/Ultimaker/Cura/2986a17c/icons/cura-128.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Ultimaker Cura prepares your model for 3D printing. For novices, it makes it easy to get great results. For experts, there are over 200 settings to adjust to your needs. And integration with major software platforms makes 3D printing even simpler.</description>
+    <summary>Cura creates a seamless integration between hardware, software and
+      materials for the best 3D printing experience around.
+      Cura supports the 3MF, OBJ and STL file formats and is available on
+Windows, Mac and Linux.</summary>
+    <tags>cura 3d-print printer</tags>
+    <projectSourceUrl>https://github.com/Ultimaker/Cura</projectSourceUrl>
+  </metadata>
+</package>
