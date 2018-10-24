@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = ''
-$url64      = 'https://github.com/Ultimaker/Cura/releases/download/3.1.0/Ultimaker.Cura-3.1.0-win64.exe'
+$url64      = 'https://github.com/Ultimaker/Cura/releases/download/3.5.1/Ultimaker.Cura-3.5.1-win64.exe'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -15,7 +15,7 @@ $packageArgs = @{
 
   checksum      = ''
   checksumType  = 'sha256'
-  checksum64    = 'D151CA8F3A060C8C900A1D5126EDCAB655176EE36F9C684B75ED8A35A9488E2D'
+  checksum64    = 'ddcab9ef28ad4162275b88e058011c9ea7d73deb46c922e391e379454f15e971'
   checksumType64= 'sha256'
 
   validExitCodes= @(0, 3010, 1641)
