@@ -26,6 +26,9 @@
     settings to adjust to your needs. And integration with major software 
     platforms makes 3D printing even simpler.</description>
     <releaseNotes>https://ultimaker.com/en/products/ultimaker-cura-software/release-notes</releaseNotes>
+    <dependencies> 
+      <dependency id="autoit" version="3.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
