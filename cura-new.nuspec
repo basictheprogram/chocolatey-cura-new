@@ -2,17 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cura-new</id>
-    <version>3.6.0</version>
+    <version>4.0.0</version>
     <packageSourceUrl>https://github.com/basictheprogram/chocolatey-cura-new</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>cura (Install)</title>
     <authors>David Braam, Ultimaker</authors>
     <projectUrl>https://github.com/Ultimaker/Cura</projectUrl>
     <iconUrl>https://cdn.rawgit.com/Ultimaker/Cura/2986a17c/icons/cura-128.png</iconUrl>
-    <copyright>© 2011-2018 Ultimaker B.V.</copyright>
+    <copyright>© 2011-2019 Ultimaker B.V.</copyright>
     <licenseUrl>https://github.com/Ultimaker/Cura/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/Ultimaker/Cura/tree/3.6</projectSourceUrl>
+    <projectSourceUrl>https://github.com/Ultimaker/Cura/tree/4.0</projectSourceUrl>
     <docsUrl>https://ultimaker.com/en/resources/51943-installation-ultimaker-cura</docsUrl>
     <mailingListUrl>https://ultimaker.com/en/knowledge</mailingListUrl>
     <bugTrackerUrl>https://github.com/Ultimaker/Cura/issues</bugTrackerUrl>
@@ -27,7 +27,6 @@
     platforms makes 3D printing even simpler.</description>
     <releaseNotes>https://ultimaker.com/en/products/ultimaker-cura-software/release-notes</releaseNotes>
     <dependencies> 
-      <dependency id="autoit" version="3.3" />
     </dependencies>
   </metadata>
   <files>

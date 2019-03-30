@@ -1,42 +1,26 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$FullPackage = "Ultimaker.Cura-3.6.0-win64.exe"
+# https://download.ultimaker.com/cura/Ultimaker_Cura-4.0.0-win64.exe
+
+$FullPackage = "Ultimaker_Cura-4.0.0-win64.exe"
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = ''
-$url64       = 'https://github.com/Ultimaker/Cura/releases/download/3.6.0/' + $FullPackage
+$url64       = 'https://download.ultimaker.com/cura/' + $FullPackage
 $WorkSpace   = Join-Path $env:TEMP $env:ChocolateyPackageName 
 
-
-$WebFileArgs = @{
+$packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  FileFullPath  = Join-Path $WorkSpace $FullPackage
-  url           = $url
+  unzipLocation = $toolsDir
+  fileType      = 'exe'
   url64bit      = $url64
 
   softwareName  = 'Ultimakercura*'
 
-  checksum      = ''
-  checksumType  = 'sha256'
-  checksum64    = '790eeeaea278e60e2cd23703df8c300b2d45e52227887036e6b6be0516d2b8af'
+  checksum64    = 'f45a1c7b10b88d60e3cdea0530a4ddd499effd51eaf339b379ca8a37a7278c88'
   checksumType64= 'sha256'
+
+  validExitCodes= @(0, 3010, 1641)
+  silentArgs   = '/S'
 }
 
-$PackedInstaller = Get-ChocolateyWebFile @WebFileArgs
-
-# silent install requires AutoIT
-# see https://github.com/basictheprogram/chocolatey-cura-new/issues/1
-# see https://github.com/Ultimaker/Cura/issues/1245
-#
-$autoitExe    = 'AutoIt3.exe'
-#$toolsDir     = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$autoitFile   = Join-Path $toolsDir 'cura-new.au3'
-$fileFullPath = Join-Path $WorkSpace $FullPackage
-Write-Debug "AutoItFile: `t$autoitFile"
-Write-Debug "FileFullPath `t$fileFullPath"
-
-$autoitProc   = Start-Process -FilePath $autoitExe -ArgumentList "$autoitFile $fileFullPath /S" -PassThru
-$autoitId     = $autoitProc.Id
-Write-Debug "autoitProc `t$autoitProc"
-Write-Debug "$autoitExe start time:`t$($autoitProc.StartTime.ToShortTimeString())"
-Write-Debug "Process ID: `t$autoitId"
+Install-ChocolateyPackage @packageArgs
 
