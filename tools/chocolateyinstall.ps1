@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-# https://github.com/Ultimaker/Cura/releases/download/4.3.0/Ultimaker_Cura-4.3.0-win64.exe
+# https://github.com/Ultimaker/Cura/releases/download/v4.4.0/Ultimaker.Cura-4.4.0-win64.exe
 
-$FullPackage = "Ultimaker_Cura-4.3.0-win64.exe"
+$FullPackage = "Ultimaker.Cura-4.4.0-win64.exe"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64 = 'https://github.com/Ultimaker/Cura/releases/download/4.3.0/' + $FullPackage
+$url64 = 'https://github.com/Ultimaker/Cura/releases/download/v4.4.0/' + $FullPackage
 $WorkSpace = Join-Path $env:TEMP $env:ChocolateyPackageName 
 
 $packageArgs = @{
@@ -15,7 +15,7 @@ $packageArgs = @{
 
     softwareName   = 'Ultimakercura*'
 
-    checksum64     = 'bf35a3939776ccf7559e520247b8b4e1e092e876e266ba465ea55b6f63752cd7'
+    checksum64     = '0a7109a64e0938a77d9a987ef0ae6867d4e98112420642633461598fbd6fa00a'
     checksumType64 = 'sha256'
 
     validExitCodes = @(0, 3010, 1641)
