@@ -2,17 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cura-new</id>
-    <version>4.4.1.20200104</version>
+    <version>4.5.0</version>
     <packageSourceUrl>https://github.com/basictheprogram/chocolatey-cura-new</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>cura (Install)</title>
     <authors>David Braam, Ultimaker</authors>
     <projectUrl>https://github.com/Ultimaker/Cura</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/Ultimaker/Cura/2986a17c/icons/cura-128.png</iconUrl>
+    <iconUrl>https://basictheprogram.github.io/icons/cura-128.png</iconUrl>
     <copyright>© 2011-2019 Ultimaker B.V.</copyright>
     <licenseUrl>https://github.com/Ultimaker/Cura/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/Ultimaker/Cura/tree/4.4</projectSourceUrl>
+    <projectSourceUrl>https://github.com/Ultimaker/Cura/tree/4.5.0</projectSourceUrl>
     <docsUrl>https://ultimaker.com/en/resources/52833-install-ultimaker-cura</docsUrl>
     <mailingListUrl>https://ultimaker.com/en/knowledge</mailingListUrl>
     <bugTrackerUrl>https://github.com/Ultimaker/Cura/issues</bugTrackerUrl>
@@ -26,7 +26,7 @@
       it makes it easy to get great results. For experts, there are over 200 
       settings to adjust to your needs. And integration with major software 
       platforms makes 3D printing even simpler.</description>
-    <releaseNotes>https://github.com/Ultimaker/Cura/releases/tag/4.4.1</releaseNotes>
+    <releaseNotes>https://github.com/Ultimaker/Cura/releases/tag/4.5.0</releaseNotes>
     <dependencies> 
     </dependencies>
   </metadata>
