@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cura-new</id>
-    <version>4.6.1</version>
+    <version>4.7.0</version>
     <packageSourceUrl>https://github.com/basictheprogram/chocolatey-cura-new</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>cura (Install)</title>
@@ -12,22 +12,22 @@
     <copyright>© 2011-2020 Ultimaker B.V.</copyright>
     <licenseUrl>https://github.com/Ultimaker/Cura/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/Ultimaker/Cura/tree/4.6.1</projectSourceUrl>
+    <projectSourceUrl>https://github.com/Ultimaker/Cura/tree/4.7.0</projectSourceUrl>
     <docsUrl>https://ultimaker.com/en/resources/52833-install-ultimaker-cura</docsUrl>
     <mailingListUrl>https://ultimaker.com/en/knowledge</mailingListUrl>
     <bugTrackerUrl>https://github.com/Ultimaker/Cura/issues</bugTrackerUrl>
     <tags>cura 3d-print printer</tags>
     <summary>Cura creates a seamless integration between hardware, software and
       materials for the best 3D printing experience around.
-      Cura supports the 3MF, OBJ and STL file formats and is available on Windows, 
+      Cura supports the 3MF, OBJ and STL file formats and is available on Windows,
       Mac and Linux.
     </summary>
-    <description>Ultimaker Cura prepares your model for 3D printing. For novices, 
-      it makes it easy to get great results. For experts, there are over 200 
-      settings to adjust to your needs. And integration with major software 
+    <description>Ultimaker Cura prepares your model for 3D printing. For novices,
+      it makes it easy to get great results. For experts, there are over 200
+      settings to adjust to your needs. And integration with major software
       platforms makes 3D printing even simpler.</description>
-    <releaseNotes>https://github.com/Ultimaker/Cura/releases/tag/4.6.1</releaseNotes>
-    <dependencies> 
+    <releaseNotes>https://github.com/Ultimaker/Cura/releases/tag/4.7.0</releaseNotes>
+    <dependencies>
     </dependencies>
   </metadata>
   <files>

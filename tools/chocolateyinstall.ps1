@@ -1,22 +1,22 @@
 ﻿$ErrorActionPreference = 'Stop';
-$FullPackage = "Ultimaker.Cura-4.6.1-win64.exe"
+$FullPackage = "Ultimaker_Cura-4.7.0-amd64.exe"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64 = 'https://github.com/Ultimaker/Cura/releases/download/4.6.1/' + $FullPackage
-$WorkSpace = Join-Path $env:TEMP $env:ChocolateyPackageName 
+$url64 = 'https://github.com/Ultimaker/Cura/releases/download/4.7.0/' + $FullPackage
+$WorkSpace = Join-Path $env:TEMP $env:ChocolateyPackageName
 
 $packageArgs = @{
-    packageName    = $env:ChocolateyPackageName
-    unzipLocation  = $toolsDir
-    fileType       = 'exe'
-    url64bit       = $url64
+  packageName    = $env:ChocolateyPackageName
+  unzipLocation  = $toolsDir
+  fileType       = 'exe'
+  url64bit       = $url64
 
-    softwareName   = 'Ultimakercura*'
+  softwareName   = 'Ultimakercura*'
 
-    checksum64     = '5b4d7758e274635dfc57e4024a65e694a7fae75c1ec11b03e6c576ef75579d9d'
-    checksumType64 = 'sha256'
+  checksum64     = '5d7ae8cd670ebef325a5353d15d1cbca3a88934aa98f35d4c21c0eea8d5487d2'
+  checksumType64 = 'sha256'
 
-    validExitCodes = @(0, 3010, 1641)
-    silentArgs     = '/S'
+  validExitCodes = @(0, 3010, 1641)
+  silentArgs     = '/S'
 }
 
 Install-ChocolateyPackage @packageArgs
