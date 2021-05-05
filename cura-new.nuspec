@@ -8,8 +8,8 @@
     <title>cura (Install)</title>
     <authors>David Braam, Ultimaker</authors>
     <projectUrl>https://github.com/Ultimaker/Cura</projectUrl>
-    <iconUrl>https://basictheprogram.github.io/icons/cura-128.png</iconUrl>
-    <copyright>© 2011-2019 Ultimaker B.V.</copyright>
+    <iconUrl>https://basictheprogram.github.io/Cura/icons/cura-128.png</iconUrl>
+    <copyright>© 2011-2020 Ultimaker B.V.</copyright>
     <licenseUrl>https://github.com/Ultimaker/Cura/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Ultimaker/Cura/tree/4.5.0</projectSourceUrl>
