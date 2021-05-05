@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $FullPackage = "Ultimaker_Cura-4.8.0-amd64.exe"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64 = 'https://github.com/Ultimaker/Cura/releases/download/4.8/' + $FullPackage
+$url64 = 'https://github.com/Ultimaker/Cura/releases/download/4.8.0/' + $FullPackage
 $WorkSpace = Join-Path $env:TEMP $env:ChocolateyPackageName
 
 $packageArgs = @{
