@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cura-new</id>
-    <version>4.9.0</version>
+    <version>4.9.1</version>
     <packageSourceUrl>https://github.com/basictheprogram/chocolatey-cura-new</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>cura (Install)</title>
