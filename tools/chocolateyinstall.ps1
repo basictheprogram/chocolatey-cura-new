@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$FullPackage = "Ultimaker_Cura-4.10.0-amd64.exe"
+$FullPackage = "Ultimaker_Cura-4.11.0-amd64.exe"
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64 = 'https://github.com/Ultimaker/Cura/releases/download/4.10.0/' + $FullPackage
+$url64 = 'https://github.com/Ultimaker/Cura/releases/download/4.11.0/' + $FullPackage
 $WorkSpace = Join-Path $env:TEMP $env:ChocolateyPackageName
 
 $ardunio = Join-Path $toolsDir 'Arduino.cer'
@@ -19,7 +19,7 @@ $packageArgs = @{
 
     softwareName   = 'Ultimakercura'
 
-    checksum64     = '001b2b412804ef1a10b00453ba422d1526a31844048bca23574d4116f688d98c'
+    checksum64     = '0773d5225095e0b1b0c55c185eb29063abf42976bd49f3f74feea5f9ff7cd7f9'
     checksumType64 = 'sha256'
 
     validExitCodes = @(0, 3010, 1641)
