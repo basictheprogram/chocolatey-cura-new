@@ -13,8 +13,7 @@
     <licenseUrl>https://github.com/Ultimaker/Cura/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Ultimaker/Cura/tree/4.11</projectSourceUrl>
-    <docsUrl>https://ultimaker.com/en/resources/52833-install-ultimaker-cura</docsUrl>
-    <mailingListUrl>https://ultimaker.com/en/knowledge</mailingListUrl>
+    <mailingListUrl>https://community.ultimaker.com</mailingListUrl>
     <bugTrackerUrl>https://github.com/Ultimaker/Cura/issues</bugTrackerUrl>
     <tags>cura 3d-print printer</tags>
     <summary>Cura creates a seamless integration between hardware, software and
