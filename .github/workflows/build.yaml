@@ -30,7 +30,7 @@ jobs:
       -
         name: Install
         run: |
-          choco install -dv --source=".;https://community.chocolatey.org/api/v2/" easylogusb
+          choco install -dv --source=".;https://community.chocolatey.org/api/v2/" cura-new
       -
         name: Push
         run: |
