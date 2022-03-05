@@ -10,6 +10,11 @@ on:
 
   workflow_dispatch:
 
+env:
+  CHOCO_PACKAGE_NAME: cura-new
+  CHOCO_PUSH_URL: https://push.chocolatey.org/
+  CHOCO_COMMUNITY_FEED: https://community.chocolatey.org/api/v2/
+
 jobs:
   build:
     runs-on: windows-2016
@@ -26,12 +31,12 @@ jobs:
       -
         name: Set key
         run: |
-          choco apikey --key ${{ secrets.CHOCO_API_KEY }} --source ${{ secrets.CHOCO_PUSH_URL }}
+          choco apikey --key ${{ secrets.CHOCO_API_KEY }} --source ${{ env.CHOCO_PUSH_URL }}
       -
         name: Install
         run: |
-          choco install -dv --source ".;https://community.chocolatey.org/api/v2/" cura-new
+          choco install -dv --source ".;${{ env.CHOCO_COMMUNITY_FEED }}" ${{ env.CHOCO_PACKAGE_NAME }}
       -
         name: Push
         run: |
-          choco push --api-key ${{ secrets.CHOCO_API_KEY }} --source ${{ secrets.CHOCO_PUSH_URL }}
+          choco push --api-key ${{ secrets.CHOCO_API_KEY }} --source ${{env.CHOCO_PUSH_URL }}
