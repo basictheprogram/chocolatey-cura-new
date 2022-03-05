@@ -11,13 +11,15 @@ $adafruit = Join-Path $toolsDir 'Adafruit.cer'
 Import-Certificate -FilePath $ardunio -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
 Import-Certificate -FilePath $adafruit -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
 
+& "$toolsDir\chocolateyuninstall.ps1"
+
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     unzipLocation  = $toolsDir
     fileType       = 'exe'
     url64bit       = $url64
 
-    softwareName   = 'Ultimakercura'
+    softwareName   = 'Ultimaker'
 
     checksum64     = '8de0c18a61a29cac9cbcd5b6d1db1de925f3ea36d67d50e0aabef81d66a91538'
     checksumType64 = 'sha256'
