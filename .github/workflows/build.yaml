@@ -1,12 +1,13 @@
+---
 name: Chocolatey Package
 
 # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
 #
-on:
+on:    # yamllint disable-line rule:truthy
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   workflow_dispatch:
 
