@@ -31,3 +31,15 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+# Work around for https://github.com/Ultimaker/Cura/issues/12449
+#
+Install-ChocolateyShortcut `
+    -ShortcutFilePath "C:\Users\Public\Desktop\Ultimaker Cura 5.0.0.lnk" `
+    -TargetPath "C:\Program Files\Ultimaker Cura 5.0.0\Ultimaker-Cura.exe" `
+    -WorkingDirectory "C:\Program Files\Ultimaker Cura 5.0.0"
+
+Install-ChocolateyShortcut `
+    -ShortcutFilePath "C:\ProgramData\Microsoft\Windows\Start Menu\\Ultimaker Cura 5.0.0.lnk" `
+    -TargetPath "C:\Program Files\Ultimaker Cura 5.0.0\Ultimaker-Cura.exe" `
+    -WorkingDirectory "C:\Program Files\Ultimaker Cura 5.0.0"
