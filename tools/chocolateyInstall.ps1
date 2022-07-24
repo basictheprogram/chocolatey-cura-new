@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$FullPackage = "Ultimaker-Cura-5.0.0-win64.exe"
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64 = 'https://github.com/Ultimaker/Cura/releases/download/5.0.0/' + $FullPackage
+$data = & (Join-Path -Path (Split-Path -Path $MyInvocation.MyCommand.Path) -ChildPath data.ps1)
+$packageName = $env:ChocolateyPackageName
 $WorkSpace = Join-Path $env:TEMP $env:ChocolateyPackageName
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 # v5.0.0 fixed the certificate issue.  Leave it here just in case?
 #
@@ -16,16 +16,13 @@ $WorkSpace = Join-Path $env:TEMP $env:ChocolateyPackageName
 & "$toolsDir\chocolateyUninstall.ps1"
 
 $packageArgs = @{
-    packageName    = $env:ChocolateyPackageName
+    packageName    = $packageName
+    url64bit       = $data.url64
+    checksum64     = $data.checkSum64
+    checksumType   = $data.checksumType
     unzipLocation  = $toolsDir
     fileType       = 'exe'
-    url64bit       = $url64
-
     softwareName   = 'Ultimaker'
-
-    checksum64     = '3adc5f24a0ae705a3e302587ed7950f05d6f2c60834fce13fa69c2aef3a8da62'
-    checksumType64 = 'sha256'
-
     validExitCodes = @(0, 3010, 1641)
     silentArgs     = '/S'
 }
