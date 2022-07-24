@@ -13,7 +13,7 @@ include:
   - template: Container-Scanning.gitlab-ci.yml
 
 variables:
-  CHOCO_PACKAGE_NAME: arq
+  CHOCO_PACKAGE_NAME: cura-new
   CHOCO_COMMUNITY_PUSH_URL: https://push.chocolatey.org/
   CHOCO_COMMUNITY_FEED: https://community.chocolatey.org/api/v2/
 
