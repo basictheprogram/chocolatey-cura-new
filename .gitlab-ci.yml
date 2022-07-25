@@ -36,18 +36,19 @@ build_job:
   stage: build
   script:
     - choco pack
+
   artifacts:
     paths:
-      - /builds
+      - $CHOCO_PACKAGE_NAME*.nupkg
 
 test_job:
   stage: test
   script:
-    - choco install -dv -s "'.;$CHOCO_COMMUNITY_FEED'" "$CHOCO_PACKAGE_NAME"
+    - choco install -y -dv -s "'.;$CHOCO_COMMUNITY_FEED'" "$CHOCO_PACKAGE_NAME"
     - choco uninstall "$CHOCO_PACKAGE_NAME"
   artifacts:
     paths:
-      - /builds
+      - $CHOCO_PACKAGE_NAME*.nupkg
 
 push_job:
   stage: push
@@ -60,4 +61,4 @@ push_job:
     - choco push --source $CHOCO_COMMUNITY_PUSH_URL
   artifacts:
     paths:
-      - /builds
+      - $CHOCO_PACKAGE_NAME*.nupkg
