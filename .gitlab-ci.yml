@@ -45,7 +45,7 @@ test_job:
   stage: test
   script:
     - choco install -y -dv -s "'.;$CHOCO_COMMUNITY_FEED'" "$CHOCO_PACKAGE_NAME"
-    - choco uninstall "$CHOCO_PACKAGE_NAME"
+    - choco uninstall -y "$CHOCO_PACKAGE_NAME"
   artifacts:
     paths:
       - $CHOCO_PACKAGE_NAME*.nupkg
