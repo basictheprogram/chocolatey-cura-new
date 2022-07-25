@@ -1,7 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $data = & (Join-Path -Path (Split-Path -Path $MyInvocation.MyCommand.Path) -ChildPath data.ps1)
-$packageName = $env:ChocolateyPackageName
 $WorkSpace = Join-Path $env:TEMP $env:ChocolateyPackageName
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
@@ -16,27 +15,29 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 & "$toolsDir\chocolateyUninstall.ps1"
 
 $packageArgs = @{
-    packageName    = $packageName
-    url64bit       = $data.url64
-    checksum64     = $data.checkSum64
-    checksumType   = $data.checksumType
+    packageName    = $env:ChocolateyPackageName
     unzipLocation  = $toolsDir
     fileType       = 'exe'
+    silentArgs     = '/S'
     softwareName   = 'Ultimaker'
     validExitCodes = @(0, 3010, 1641)
-    silentArgs     = '/S'
+
+    url            = $data.url
+    checksum       = $data.checksum
+    checksumType   = $data.checksumType
 }
 
 Install-ChocolateyPackage @packageArgs
 
 # Work around for https://github.com/Ultimaker/Cura/issues/12449
 #
-Install-ChocolateyShortcut `
-    -ShortcutFilePath "C:\Users\Public\Desktop\Ultimaker Cura 5.0.0.lnk" `
-    -TargetPath "C:\Program Files\Ultimaker Cura 5.0.0\Ultimaker-Cura.exe" `
-    -WorkingDirectory "C:\Program Files\Ultimaker Cura 5.0.0"
+# Install-ChocolateyShortcut `
+#     -ShortcutFilePath "C:\Users\Public\Desktop\Ultimaker Cura 5.0.0.lnk" `
+#     -TargetPath "C:\Program Files\Ultimaker Cura 5.0.0\Ultimaker-Cura.exe" `
+#    -WorkingDirectory "C:\Program Files\Ultimaker Cura 5.0.0"
 
-Install-ChocolateyShortcut `
-    -ShortcutFilePath "C:\ProgramData\Microsoft\Windows\Start Menu\\Ultimaker Cura 5.0.0.lnk" `
-    -TargetPath "C:\Program Files\Ultimaker Cura 5.0.0\Ultimaker-Cura.exe" `
-    -WorkingDirectory "C:\Program Files\Ultimaker Cura 5.0.0"
+#Install-ChocolateyShortcut `
+#    -ShortcutFilePath "C:\ProgramData\Microsoft\Windows\Start Menu\\Ultimaker Cura 5.0.0.lnk" `
+#    -TargetPath "C:\Program Files\Ultimaker Cura 5.0.0\Ultimaker-Cura.exe" `
+#    -WorkingDirectory "C:\Program Files\Ultimaker Cura 5.0.0"
+
