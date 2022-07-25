@@ -3,4 +3,3 @@
     checksum = 'aa2162a2e8dad913d0529158dea922ffe692e9e9e0c6076ff7e84e9c4af7ee05'
     checksumType = 'sha256'
 }
-

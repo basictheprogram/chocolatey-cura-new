@@ -23,10 +23,9 @@ container_scanning:
     CS_DISABLE_LANGUAGE_VULNERABILITY_SCAN: "false"
 
 default:
-  image: chocolatey/choco:latest-linux
+  image: chocolatey/choco:latest-windows
   tags:
-    - docker
-    - real-time.com
+    - windows
 
 stages:
   - build
