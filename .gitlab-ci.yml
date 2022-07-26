@@ -24,8 +24,6 @@ container_scanning:
 
 default:
   image: chocolatey/choco:latest-windows
-  tags:
-    - windows
 
 stages:
   - build
@@ -44,6 +42,8 @@ build_job:
 test_job:
   stage: test
   image: chocolatey/choco:latest-windows
+  tags:
+    - windows
   script:
     - choco install -y -dv -s "'.;$CHOCO_COMMUNITY_FEED'" "$CHOCO_PACKAGE_NAME"
     - choco uninstall -y "$CHOCO_PACKAGE_NAME"
