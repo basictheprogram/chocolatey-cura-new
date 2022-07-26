@@ -34,15 +34,16 @@ stages:
 
 build_job:
   stage: build
+  image: chocolatey/choco:latest-linux
   script:
     - choco pack
-
   artifacts:
     paths:
       - $CHOCO_PACKAGE_NAME*.nupkg
 
 test_job:
   stage: test
+  image: chocolatey/choco:latest-windows
   script:
     - choco install -y -dv -s "'.;$CHOCO_COMMUNITY_FEED'" "$CHOCO_PACKAGE_NAME"
     - choco uninstall -y "$CHOCO_PACKAGE_NAME"
@@ -52,6 +53,7 @@ test_job:
 
 push_job:
   stage: push
+  image: chocolatey/choco:latest-linux
   rules:
     - if: $CI_PIPELINE_SOURCE == "push"
       when: manual
