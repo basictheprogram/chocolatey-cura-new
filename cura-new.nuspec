@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cura-new</id>
-    <version>5.1</version>
+    <version>5.1.0</version>
     <packageSourceUrl>https://github.com/basictheprogram/chocolatey-cura-new</packageSourceUrl>
     <owners>basictheprogram</owners>
     <title>cura (Install)</title>
@@ -25,7 +25,7 @@
       it makes it easy to get great results. For experts, there are over 200
       settings to adjust to your needs. And integration with major software
       platforms makes 3D printing even simpler.</description>
-    <releaseNotes>https://github.com/Ultimaker/Cura/releases/tag/5.0.0</releaseNotes>
+    <releaseNotes>https://github.com/Ultimaker/Cura/releases/tag/5.1.0</releaseNotes>
     <dependencies>
     </dependencies>
   </metadata>
